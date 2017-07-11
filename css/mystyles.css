@@ -1,0 +1,176 @@
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px;
+}
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+.row-footer {
+  margin: 0px auto;
+  padding: 20px 0px;
+  background-color: #AfAfAf;
+}
+.jumbotron {
+  margin: 0px auto;
+  padding: 200px 30px;
+  background: url('../img/background.jpg');
+  color: floralwhite;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#function {
+  margin: 0px auto;
+  padding: 250px 0;
+  background: url('../img/function.png');
+    background-repeat: repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+
+.head_intro{
+  margin-top: 100px;
+  margin-bottom: 100px;
+  color:gray;
+  text-align:center
+}
+
+.row-intro{
+  min-height:600px;
+}
+
+.row-limit{
+  max-height:150px;
+}
+
+.carousel {
+  background: #1a237e;
+}
+.carousel .item {
+  max-height:750px;
+  min-height:400px;
+  height: 50vw;
+}
+.carousel .item img {
+  min-height: 400px;
+  position: absolute;
+  top: 0;
+  left:0%
+
+}
+.carousel-caption{
+  position:absolute;
+  top:7vw;
+}
+
+.carousel-indicators li {
+  display: inline-block;
+  width: 25px;
+  height: 6px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #000 \9;
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #fff;
+  border-radius: 0px;
+}
+
+.carousel-indicators li.active {
+  display: inline-block;
+  width: 25px;
+  height: 6px;
+  margin: 1px;
+  text-indent: -999px;
+  cursor: pointer;
+  background-color: #fff;
+  background-color: rgb(255,255,255);
+  border: 1px solid #fff;
+  border-radius: 0px;
+}
+
+
+
+
+
+
+.navbar-inverse {
+  background: #323232;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a {
+  background:#323232;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .active > a:hover {
+  background:#323232;
+  color: #9C9C9C;
+}
+.navbar-inverse .navbar-nav > .active > a:focus {
+  background: #323232;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .open > a {
+  background: #323232;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .open > a:hover {
+  background: #323232;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav > .open > a:focus {
+  background: #323232;
+  color: #ffffff;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+  background-color: #303f9f;
+  color: #eeeeee;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover {
+  color: #000000;
+}
+.navbar-inverse .navbar-nav .open .dropdown-menu {
+  background-color: #303f9f;
+  color: #eeeeee;
+}
+
+
+
+
+address {
+  color: #0f0f0f;
+  font-size: 80%;
+  margin: 0px;
+}
+body {
+  align: center;
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+.tab-content {
+  border-bottom: 1px solid #dddddd;
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  padding: 10px;
+}
+.affix {
+  top: 100px;
+}
+#carouselButtons {
+  bottom: 0px;
+  position: absolute;
+  right: 0px;
+}
