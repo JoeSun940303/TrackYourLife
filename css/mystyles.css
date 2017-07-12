@@ -449,6 +449,13 @@ body {
 .affix {
   top: 100px;
 }
+
+.inputregion{
+  margin:5px;
+  width: 280px;
+  height:30px;
+}
+
 #carouselButtons {
   bottom: 0px;
   position: absolute;

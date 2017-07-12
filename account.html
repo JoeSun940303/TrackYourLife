@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head
+       content must come *after* these tags -->
+
+  <title>Track Your Life</title>
+  <!-- Bootstrap -->
+  <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css" rel="stylesheet">
+  <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <link href="css/bootstrap-social.css" rel="stylesheet">
+  <link href="css/mystyles.css" rel="stylesheet">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+   <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container-fluid">
+
+              <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#mynav" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                  <a class="navbar-brand" href="#" ><img src="img/Track.png" height=30 width=80></a>
+                </div>
+
+                <div class="navbar-collapse collapse" id="mynav">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#"> Home</a></li>
+                    <li><a href="aboutus.html">About</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                         role="button" aria-haspopup="true" aria-expanded="false">
+                         Track <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Exercise</a></li>
+                            <li><a href="#">Meal</a></li>
+                            <li><a href="#">Learning</a></li>
+                            <li><a href="#">Notes</a></li>
+                        </ul>
+                     </li>
+
+                     <li class="dropdown">
+                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                          role="button" aria-haspopup="true" aria-expanded="false">
+                          Leisure <span class="caret"></span></a>
+                         <ul class="dropdown-menu">
+                             <li><a href="#">News</a></li>
+                             <li><a href="#">Calm</a></li>
+                             <li><a href="#">ComeSoon</a></li>
+                         </ul>
+                      </li>
+
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                           role="button" aria-haspopup="true" aria-expanded="false">
+                           Development <span class="caret"></span></a>
+                          <ul class="dropdown-menu">
+                              <li><a href="#">Developer sign in</a></li>
+                              <li><a href="#">Join us</a></li>
+                              <li><a href="#">Our source code</a></li>
+                          </ul>
+                       </li>
+
+                    <li><a href="contactus.html">Contact</a></li>
+                  </ul>
+                  <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                         role="button" aria-haspopup="true" aria-expanded="false">
+                         Account <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href = 'account.html'>Sign up</a></li>
+                            <li><a id = "signinbutton">Sign in</a></li>
+                        </ul>
+                     </li>
+                  <!--
+                    <li>
+                      <a id = "signinbutton">
+                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                  -->
+                </ul>
+              </div>
+
+            </div>
+        </nav>
+
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Login </h4>
+                </div>
+                <div class="modal-body">
+                  <form class = "form-inline">
+                    <div class="form-group" >
+                        <label class = "sr-only" for="username">E-mail</label>
+                        <input type = "email" class = "form-control" id = "e-mail" placeholder="e-mail" size = "18">
+                    </div>
+                    <div class="form-group">
+                        <label class = "sr-only" for="password">Password</label>
+                        <input type = "password" class = "form-control" id = "password" placeholder="password" size = "18">
+                    </div>
+                    <div class = "checkbox">
+                      <label> <input type = "checkbox"> <span style = "color:black">Remember Me</span> </label>
+                    </div>
+                    <button type = "button" class = "btn btn-default btn-sm" > Sign in </button>
+                    <button type="button" class="btn btn-default btn-sm"
+                           data-dismiss="modal">Cancel</button>
+
+                  </form>
+
+                </div>
+            </div>
+            </div>
+        </div>
+
+
+
+<div class = "row">
+    <header class="jumbotron">
+        <!-- Main component for a primary marketing message or call to action -->
+
+        <div class = "container">
+            <div class = "row row-header">
+                <div class = "col-xs-12 col-sm-6 nopadding">
+                    <h1>Create your ID</h1>
+                    <p style="padding:30px;"></p>
+                    <p>Now, just one account, you can achieve the function combined from different apps before</p>
+                </div>
+            </div>
+        </div>
+    </header>
+  </div>
+
+  <form action="">
+
+    <fieldset class="form-account" style = "border-radius:10px;position: relative;text-align:center;z-index: 998; top:20; margin:20px;margin-left:20%; margin-right:20%">
+        <legend style="text-align:left">Account information:</legend>
+         <img src="accountbackground.jpg" width = "100px" height="100px "style ="border-radius: 50%;" > <br/>
+        <input class = "inputregion" type="text" name="accountname" placeholder="Account Name" style = "border-radius:5px;"> <br>
+        <input  class = "inputregion" type="password" name="password" placeholder="Password" style = "border-radius:5px;"> <br>
+        <input  class = "inputregion" type="password" name="comfirm" placeholder="Comfirm password" style = "border-radius:5px;">  <br/>
+        <input class = "inputregion" type="email" name="email" placeholder="E-mail" style = "border-radius:5px;">  <br/>
+        <input class = "inputregion" type="file" name="img"> <br/>
+
+      </fieldset>
+
+
+      <fieldset class="form-basicinfo" style = "border-radius:10px;position: relative;text-align:center;z-index: 998; top:20px; margin-left:20%; margin-right:20%;">
+        <legend style="text-align:left; ">Personal information:</legend>
+          <input class = "inputregion" type="text" name="firstname" placeholder="First name" style = "border-radius:5px;"> <br>
+          <input class = "inputregion" type="text" name="lastname" placeholder="Last name" style = "border-radius:5px;"> <br>
+          <input class = "inputregion" type="text" name="bday" placeholder="Birthday" style = "border-radius:5px;">  <br/>
+          <select name="gender" class = "inputregion">
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+              <option value="Other">Other</option>
+            </select>
+
+      </fieldset>
+
+
+
+
+      <fieldset class="form-security" style = "border-radius:10px;position: relative;text-align:center;z-index: 998; top:20px; margin:20px;margin-left:20%; margin-right:20%">
+          <legend style="text-align:left">Security Question:</legend>
+
+          <input list="Q1" class ="inputregion" placeholder="Security Question 1" style = "border-radius:5px;">
+              <datalist id="Q1">
+                <option value="What's your father's first name">
+                <option value="who's your favourite singer">
+                <option value="What is your birthday">
+                <option value="When you enter your high school">
+                <option value="When you get married">
+              </datalist> <br/>
+              <input class = "inputregion"  type="email" name="email" placeholder="Answer" style = "border-radius:5px;">  <br/>
+
+          <input list="Q2" class ="inputregion" placeholder="Security Question 2" style = "border-radius:5px;">
+              <datalist id="Q2">
+                <option value="What's your father's first name">
+                <option value="who's your favourite singer">
+                <option value="What is your birthday">
+                <option value="When you enter your high school">
+                <option value="When you get married">
+              </datalist> <br/>
+              <input class = "inputregion"  type="email" name="email" placeholder="Answer" style = "border-radius:5px;">  <br/>
+
+          <input list="Q3" class ="inputregion" placeholder="Security Question 3" style = "border-radius:5px;">
+              <datalist id="Q3">
+                <option value="What's your father's first name">
+                <option value="who's your favourite singer">
+                <option value="What is your birthday">
+                <option value="When you enter your high school">
+                <option value="When you get married">
+              </datalist> <br/>
+              <input class = "inputregion"  type="email" name="email" placeholder="Answer" style = "border-radius:5px;">  <br/>
+        </fieldset>
+
+        <div style="position:relative; text-align:center; margin:40px; margin-left:20%;margin-right:20%">
+          <input type="submit" id="search" value="Register"  style="width: 200px;" />
+        </div>
+
+  </form>
+
+
+
+
+
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script>
+        $(document).ready(function(){
+            $("#mycarousel").carousel( { interval: 2000 } );
+            $("#carousel-pause").click(function(){
+                $("#mycarousel").carousel('pause');
+            });
+            $("#carousel-play").click(function(){
+                $("#mycarousel").carousel('cycle');
+            });
+            $("#signinbutton").click(function(){
+                $('#loginModal').modal('show')
+            });
+            $("#reserveButton").click(function(){
+                $('#reserveModal').modal('show')
+            });
+
+        });
+    </script>
+</body>
+
+</html>
