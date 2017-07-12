@@ -15,7 +15,7 @@
 }
 .jumbotron {
   margin: 0px auto;
-  padding: 200px 30px;
+  padding: 200px 0px;
   background: url('../img/background.jpg');
   color: floralwhite;
     background-repeat: no-repeat;
@@ -25,6 +25,10 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+}
+.nopadding{
+  padding: 0 !important;
+   margin: 0 !important;
 }
 
 #function {
@@ -40,6 +44,33 @@
     background-size: cover;
 }
 
+#screenshot1 {
+  background: url('../img/screenshot1.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#screenshot2{
+  background: url('../img/screenshot2.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#screenshot3{
+  background: url('../img/screenshot3.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.btn-detail{
+  opacity: 0.5;
+}
+.btn-detail:hover{
+  opacity: 1;
+}
 
 .head_intro{
   margin-top: 100px;
@@ -48,13 +79,262 @@
   text-align:center
 }
 
-.row-intro{
-  min-height:600px;
+
+.img-large{
+  height:100%;
 }
 
-.row-limit{
-  max-height:150px;
+.right{
+  text-align: right;
 }
+
+@media (max-width:767px){
+  #trainitem1{
+     background: url('https://static1.keepcdn.com/misc/2016/06/02/23/554474e4c9000000.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+
+  #trainitem2{
+     background: url('https://www.jackedfactory.com/wp-content/uploads/2014/11/Dollarphotoclub_63757835.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+
+  #trainitem3{
+     background: url('http://www.karmayogadubai.com/wp-content/uploads/2017/03/yoga_dubai_mall_airport_karmayoga_karma_mandala_studio_pilates_yoga_dubai_uae_united_arab_emirates_fitness_3.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem4{
+     background: url('https://wallpaperscraft.com/image/linux_juice_windows_white_penguin_26510_3840x2160.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem5{
+     background: url('https://wallpapersontheweb.com/wallpapers/l/minimalism_adobe_photoshop_logo-5458.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem6{
+     background: url('http://blog.hdwallsource.com/wp-content/uploads/2016/02/free-sushi-wallpaper-41151-42134-hd-wallpapers-1024x576.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem7{
+     background: url('http://homecookingadventure.com/images/recipes/Chocolate_Mirror_Cake_main.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem8{
+     background: url('http://i.ndtvimg.com/i/2015-09/spring-rolls-625_625x350_71441392136.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem9{
+     background: url('http://i.ndtvimg.com/i/2015-09/noodles-625_625x350_51441392094.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  .item-title{
+    text-align: center;
+    color:white;
+  }
+  .item-intro{
+    text-align: center;
+    color:#DEDEDE;
+  }
+  .row-label{
+    height:220px;
+    overflow:hidden;
+    transition: height 0.5s;
+  }
+
+  .row-label:hover{
+    height:270px;
+    overflow: visible;
+  }
+  .row-intro1{
+    min-height:580px;
+    margin:0px;
+  }
+  .row-intro2{
+    min-height:360px;
+    margin:0px;
+  }
+  .row-intro3{
+    min-height:800px;
+    margin:0px;
+  }
+
+
+
+}
+
+@media (min-width:767px){
+  #trainitem1{
+     background: url('https://static1.keepcdn.com/misc/2016/06/02/23/554474e4c9000000.jpg');
+     background-size: auto 120%;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem2{
+     background: url('https://www.jackedfactory.com/wp-content/uploads/2014/11/Dollarphotoclub_63757835.jpg');
+     background-size: auto 120%;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+
+  #trainitem3{
+     background: url('http://www.karmayogadubai.com/wp-content/uploads/2017/03/yoga_dubai_mall_airport_karmayoga_karma_mandala_studio_pilates_yoga_dubai_uae_united_arab_emirates_fitness_3.jpg');
+     background-size: auto 120%;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem4{
+     background: url('https://wallpaperscraft.com/image/linux_juice_windows_white_penguin_26510_3840x2160.jpg');
+     background-size: auto 120%;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem5{
+     background: url('https://wallpapersontheweb.com/wallpapers/l/minimalism_adobe_photoshop_logo-5458.jpg');
+     background-size: auto 120%;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem6{
+     background: url('http://blog.hdwallsource.com/wp-content/uploads/2016/02/free-sushi-wallpaper-41151-42134-hd-wallpapers-1024x576.jpg');
+     background-size: auto 120%;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem7{
+     background: url('http://homecookingadventure.com/images/recipes/Chocolate_Mirror_Cake_main.jpg');
+     background-size: auto 120%;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem8{
+     background: url('http://i.ndtvimg.com/i/2015-09/spring-rolls-625_625x350_71441392136.jpg');
+     background-size: auto 120%;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem9{
+     background: url('http://i.ndtvimg.com/i/2015-09/noodles-625_625x350_51441392094.jpg');
+     background-size: auto 120%;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  .item-title{
+    margin-left:20px;
+    color:white;
+  }
+  .item-intro{
+    margin-left:20px;
+    color:#DEDEDE;
+  }
+  .item-padding{
+    padding:10px;
+    left:50px;
+  }
+  .row-label{
+    height:220px;
+    overflow:hidden;
+    margin-top:10px;
+    margin-bottom:10px;
+    margin-left:0px;
+    margin-right:0px;
+    transition: margin 0.5s;
+  }
+
+  .row-label:hover{
+    margin-left:-10px;
+    margin-right:-10px;
+    overflow: visible;
+  }
+  .row-intro1{
+    min-height:600px;
+    margin:0px;
+  }
+  .row-intro2{
+    min-height:600px;
+    margin:0px;
+  }
+  .row-intro3{
+    min-height:500px;
+    margin:0px;
+  }
+}
+
+@media (min-width:1180px){
+  #trainitem1{
+     background: url('https://static1.keepcdn.com/misc/2016/06/02/23/554474e4c9000000.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+
+  #trainitem2{
+     background: url('https://www.jackedfactory.com/wp-content/uploads/2014/11/Dollarphotoclub_63757835.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem3{
+     background: url('http://www.karmayogadubai.com/wp-content/uploads/2017/03/yoga_dubai_mall_airport_karmayoga_karma_mandala_studio_pilates_yoga_dubai_uae_united_arab_emirates_fitness_3.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem4{
+     background: url('https://wallpaperscraft.com/image/linux_juice_windows_white_penguin_26510_3840x2160.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem5{
+     background: url('https://wallpapersontheweb.com/wallpapers/l/minimalism_adobe_photoshop_logo-5458.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem6{
+     background: url('http://blog.hdwallsource.com/wp-content/uploads/2016/02/free-sushi-wallpaper-41151-42134-hd-wallpapers-1024x576.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem7{
+     background: url('http://homecookingadventure.com/images/recipes/Chocolate_Mirror_Cake_main.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem8{
+     background: url('http://i.ndtvimg.com/i/2015-09/spring-rolls-625_625x350_71441392136.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+  #trainitem9{
+     background: url('http://i.ndtvimg.com/i/2015-09/noodles-625_625x350_51441392094.jpg');
+     background-size: 100% auto;
+     background-repeat: no-repeat;
+     background-position: center center;
+  }
+}
+
 
 .carousel {
   background: #1a237e;
