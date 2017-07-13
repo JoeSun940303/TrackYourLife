@@ -28,7 +28,7 @@
 
 <body>
 
-  <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
             <div class="container-fluid">
 
               <div class="navbar-header">
@@ -38,12 +38,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                  <a class="navbar-brand" href="#" ><img src="img/Track.png" height=30 width=80></a>
+                  <a class="navbar-brand" href="index.html" ><img src="img/Track.png" height=30 width=80></a>
                 </div>
 
                 <div class="navbar-collapse collapse" id="mynav">
                 <ul class="nav navbar-nav">
-                  <li class="active"><a href="#"> Home</a></li>
+                  <li><a href="index.html"> Home</a></li>
                     <li><a href="aboutus.html">About</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -82,7 +82,7 @@
                     <li><a href="contactus.html">Contact</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
+                    <li class="dropdown active">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                          role="button" aria-haspopup="true" aria-expanded="false">
                          Account <span class="caret"></span></a>
@@ -135,40 +135,46 @@
             </div>
         </div>
 
-
-
-<div class = "row">
+<div class = "row" style = "position:relative;">
     <header class="jumbotron">
         <!-- Main component for a primary marketing message or call to action -->
 
         <div class = "container">
             <div class = "row row-header">
-                <div class = "col-xs-12 col-sm-6 nopadding">
+              <div class="col-xs-1 visible-xs"> </div>
+                <div class = "col-xs-10 col-sm-6 nopadding">
                     <h1>Create your ID</h1>
                     <p style="padding:30px;"></p>
                     <p>Now, just one account, you can achieve the function combined from different apps before</p>
                 </div>
             </div>
-        </div>
+        </div> d
     </header>
-  </div>
+</div>
 
   <form action="">
 
-    <fieldset class="form-account" style = "border-radius:10px;position: relative;text-align:center;z-index: 998; top:20; margin:20px;margin-left:20%; margin-right:20%">
-        <legend style="text-align:left">Account information:</legend>
-         <img src="accountbackground.jpg" width = "100px" height="100px "style ="border-radius: 50%;" > <br/>
+    <fieldset id = "field" class="form-account" style = "position: relative;text-align:center;z-index: 998; top:20; margin:20px;margin-left:20%; margin-right:20%">
+        <legend style="text-align:center">Account information:</legend>
+
+        <div class="image-upload">
+             <label for="file-input">
+                 <img id = "accountpic" src="img/accountbackground.jpg" style ="height:100px;width:100px;border-radius: 50%;"/>
+             </label>
+             <input id="file-input" type="file"/>
+        </div>
+
+        <p style = "margin: 20px"> Click on image to choose your account profile </p>
         <input class = "inputregion" type="text" name="accountname" placeholder="Account Name" style = "border-radius:5px;"> <br>
         <input  class = "inputregion" type="password" name="password" placeholder="Password" style = "border-radius:5px;"> <br>
         <input  class = "inputregion" type="password" name="comfirm" placeholder="Comfirm password" style = "border-radius:5px;">  <br/>
         <input class = "inputregion" type="email" name="email" placeholder="E-mail" style = "border-radius:5px;">  <br/>
-        <input class = "inputregion" type="file" name="img"> <br/>
 
       </fieldset>
 
 
       <fieldset class="form-basicinfo" style = "border-radius:10px;position: relative;text-align:center;z-index: 998; top:20px; margin-left:20%; margin-right:20%;">
-        <legend style="text-align:left; ">Personal information:</legend>
+        <legend style="text-align:center; ">Personal information:</legend>
           <input class = "inputregion" type="text" name="firstname" placeholder="First name" style = "border-radius:5px;"> <br>
           <input class = "inputregion" type="text" name="lastname" placeholder="Last name" style = "border-radius:5px;"> <br>
           <input class = "inputregion" type="text" name="bday" placeholder="Birthday" style = "border-radius:5px;">  <br/>
@@ -180,11 +186,8 @@
 
       </fieldset>
 
-
-
-
       <fieldset class="form-security" style = "border-radius:10px;position: relative;text-align:center;z-index: 998; top:20px; margin:20px;margin-left:20%; margin-right:20%">
-          <legend style="text-align:left">Security Question:</legend>
+          <legend style="text-align:center">Security Question:</legend>
 
           <input list="Q1" class ="inputregion" placeholder="Security Question 1" style = "border-radius:5px;">
               <datalist id="Q1">
@@ -217,15 +220,53 @@
               <input class = "inputregion"  type="email" name="email" placeholder="Answer" style = "border-radius:5px;">  <br/>
         </fieldset>
 
-        <div style="position:relative; text-align:center; margin:40px; margin-left:20%;margin-right:20%">
-          <input type="submit" id="search" value="Register"  style="width: 200px;" />
+        <div  style="position:relative; text-align:center; margin:40px; margin-left:20%;margin-right:20%">
+          <input id="register" type="submit"  value="Register"  style="width: 200px; border-radius:8px;" />
         </div>
 
   </form>
 
-
-
-
+<div class = "row">
+   <footer style="background-color:#333333" >
+       <div class = "container">
+           <div class = "row footer-content">
+               <div class = "col-xs-6 col-sm-4 ">
+                   <h5 style="color:#D5D5D5">Related Links</h5>
+                   <ul class ="list-unstyled">
+                       <li><a style="color:#BABABA"href="https://www.google.com">The WebGithub</a></li>
+                       <li><a style="color:#BABABA"href="https://www.google.com">The University</a></li>
+                       <li><a style="color:#BABABA"href="https://www.google.com">Main Page</a></li>
+                       <li><a style="color:#BABABA"href="https://www.google.com">Contact</a></li>
+                   </ul>
+               </div>
+               <div class = "col-xs-6 col-sm-4">
+                   <h5 style="color:#D5D5D5">Developer</h5>
+               <p style="color:#BABABA">
+                Name: Yufei Sun<br>
+                Adress: 310 E Spring field Ave, Champaign<br>
+                US, 61820<br>
+                 Tel: +852 1234 5678<br>
+                E-mail: <a href="mailto:yufei940303@gmail.com">yufei940303@gmail.com</a>
+             </p>
+               </div>
+               <div class = "col-xs-12 col-sm-4">
+                 <h5 style="color:#D5D5D5">Share to</h5>
+                 <div class="nav navbar-nav" style="padding: 10px 10px;">
+                     <a class="btn btn-social-icon " href="http://google.com/+"><i class="fa fa-google-plus" style = "color:white"></i></a>
+                     <a class="btn btn-social-icon " href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook" style = "color:white"></i></a>
+                     <a class="btn btn-social-icon " href="http://www.linkedin.com/in/"><i class="fa fa-linkedin" style = "color:white"></i></a>
+                     <a class="btn btn-social-icon " href="http://twitter.com/"><i class="fa fa-twitter" style = "color:white"></i></a>
+                     <a class="btn btn-social-icon " href="http://youtube.com/"><i class="fa fa-youtube" style = "color:white"></i></a>
+                 </div>
+               </div>
+               <div class = "col-xs-12">
+                   <p style="padding:10px;"></p>
+                   <p  style="color:#BABABA" align=center>© Copyright 2015 I don't know what to write here</p>
+               </div>
+           </div>
+       </div>
+   </footer>
+</div>
 
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->

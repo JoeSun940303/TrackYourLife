@@ -461,3 +461,16 @@ body {
   position: absolute;
   right: 0px;
 }
+
+#register{
+  background-color: #F8F8F8;
+}
+
+#register:hover{
+  background-color: white;
+}
+
+.image-upload > input
+{
+    display: none;
+}
