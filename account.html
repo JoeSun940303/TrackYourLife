@@ -44,7 +44,7 @@
                 <div class="navbar-collapse collapse" id="mynav" style = "max-height: 100% !important; ">
                 <ul class="nav navbar-nav">
                   <li><a href="index.html"> Home</a></li>
-                    <li><a href="aboutus.html">About</a></li>
+                    <li><a href="#">About</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                          role="button" aria-haspopup="true" aria-expanded="false">
@@ -79,7 +79,7 @@
                           </ul>
                        </li>
 
-                    <li><a href="contactus.html">Contact</a></li>
+                    <li><a href="#">Contact</a></li>
                   </ul>
                   <ul class="nav navbar-nav navbar-right">
                     <li class="dropdown active">
@@ -112,28 +112,56 @@
                     <h4 class="modal-title">Login </h4>
                 </div>
                 <div class="modal-body">
-                  <form class = "form-inline">
-                    <div class="form-group" >
+                  <form>
+
+                    <div class = "row">
+                    <div class="form-group col-xs-12" >
                         <label class = "sr-only" for="username">E-mail</label>
                         <input type = "email" class = "form-control" id = "e-mail" placeholder="e-mail" size = "18">
                     </div>
-                    <div class="form-group">
+                    <div class="form-group col-xs-12">
                         <label class = "sr-only" for="password">Password</label>
                         <input type = "password" class = "form-control" id = "password" placeholder="password" size = "18">
                     </div>
-                    <div class = "checkbox">
+                  </div>
+
+
+                    <div class = "row hidden-xs">
+                    <div class = "checkbox col-sm-12">
                       <label> <input type = "checkbox"> <span style = "color:black">Remember Me</span> </label>
                     </div>
-                    <button type = "button" class = "btn btn-default btn-sm" > Sign in </button>
+                    <div class = "col-sm-8 col-xs-12">
+                      <a href = 'underconstruction.html'> <p>Forget password?</p> </a>
+                    </div>
+
+                    <div class = "col-sm-4 col-xs-12 text-right">
+                    <button type = "button" class = "btn btn-info btn-sm "> Sign in </button>
                     <button type="button" class="btn btn-default btn-sm"
                            data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+
+                  <div class = "row visible-xs">
+                  <div class = "checkbox text-center">
+                    <label> <input type = "checkbox"> <span style = "color:black">Remember Me</span> </label>
+                  </div>
+                  <div class = "col-sm-8 col-xs-12 text-center">
+                    <a href = 'underconstruction.html'> <p>Forget password?</p> </a>
+                  </div>
+
+                  <div class = "col-sm-4 col-xs-12 text-center">
+                  <button type = "button" class = "btn btn-info btn-sm "> Sign in </button>
+                  <button type="button" class="btn btn-default btn-sm"
+                         data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+
 
                   </form>
-
+                </div>
                 </div>
             </div>
             </div>
-        </div>
 
 <div class = "row" style = "position:relative;">
     <header class="jumbotron">
@@ -188,7 +216,8 @@
           <input class = "inputregion" type="text" name="firstname" placeholder="First name" style = "border-radius:5px;"> <br>
           <input class = "inputregion" type="text" name="lastname" placeholder="Last name" style = "border-radius:5px;"> <br>
           <input class = "inputregion" type="text" name="bday" placeholder="Birthday" style = "border-radius:5px;">  <br/>
-          <select name="gender" class = "inputregion">
+
+          <select id = "select-region" name="gender" >
               <option value="Male">Male</option>
               <option value="Female">Female</option>
               <option value="Other">Other</option>
@@ -231,7 +260,7 @@
         </fieldset>
 
         <div  style="position:relative; text-align:center; margin:40px; margin-left:20%;margin-right:20%">
-          <input id="register" type="submit"  value="Register"  style="width: 200px; border-radius:8px;" />
+          <input id="register" type="submit"  value="Register"  style="width: 140px; border-radius:5px;" />
         </div>
 
   </form>

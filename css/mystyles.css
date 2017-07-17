@@ -456,6 +456,21 @@ body {
   height:30px;
 }
 
+select#select-region {
+
+   border: 1px solid #AAA;
+   color: #555;
+   font-size: inherit;
+   overflow: hidden;
+   margin:5px;
+   text-overflow: ellipsis;
+
+   width: 280px;
+   height:30px;
+   border-radius:5px;
+}
+
+
 #carouselButtons {
   bottom: 0px;
   position: absolute;
