@@ -89,7 +89,6 @@
                         <ul class="dropdown-menu">
                             <li><a href = 'account.html'>Sign up</a></li>
                             <li><a href = "#" id = "signinbutton">Sign in</a></li>
-                            <li><a href = 'profile.html'> My profile </a> </li>
                         </ul>
                      </li>
                   <!--
@@ -172,9 +171,9 @@
             <div class = "row row-header">
               <div class="col-xs-1 visible-xs"> </div>
                 <div class = "col-xs-10 col-sm-6 nopadding">
-                    <h1>Create your ID</h1>
+                    <h1>Manage your account</h1>
                     <p style="padding:30px;"></p>
-                    <p>Now, just one account, you can achieve the function combined from different apps before</p>
+                    <p>Just need one account, you can view all your activity here</p>
                 </div>
             </div>
         </div> d
@@ -186,85 +185,11 @@
       <ol class="breadcrumb" style = "background-color:white">
         <li><a href="index.html">Home</a></li>
         <li><a href="underconstruction.html">Account</a></li>
-        <li class = "active" > Sign up </li>
+        <li class = "active" > profile </li>
       </ol>
     </div>
 </div>
 
-  <form action="http://10.182.191.177:8080">
-
-    <fieldset id = "field" class="form-account" style = "position: relative;text-align:center;z-index: 998; top:20; margin:20px;margin-left:20%; margin-right:20%">
-        <legend style="text-align:center">Account information:</legend>
-
-        <div class="image-upload">
-             <label for="file-input">
-                 <img id = "accountpic" src="img/accountbackground.jpg" style ="height:100px;width:100px;border-radius: 50%;"/>
-             </label>
-             <input id="file-input" type="file"/>
-        </div>
-
-        <p style = "margin: 20px"> Click on image to choose your account profile </p>
-        <input class = "inputregion" type="text" name="accountname" placeholder="Account Name" style = "border-radius:5px;"> <br>
-        <input  class = "inputregion" type="password" name="password" placeholder="Password" style = "border-radius:5px;"> <br>
-        <input  class = "inputregion" type="password" name="comfirm" placeholder="Comfirm password" style = "border-radius:5px;">  <br/>
-        <input class = "inputregion" type="email" name="email" placeholder="E-mail" style = "border-radius:5px;">  <br/>
-
-      </fieldset>
-
-
-      <fieldset class="form-basicinfo" style = "border-radius:10px;position: relative;text-align:center;z-index: 998; top:20px; margin-left:20%; margin-right:20%;">
-        <legend style="text-align:center; ">Personal information:</legend>
-          <input class = "inputregion" type="text" name="firstname" placeholder="First name" style = "border-radius:5px;"> <br>
-          <input class = "inputregion" type="text" name="lastname" placeholder="Last name" style = "border-radius:5px;"> <br>
-          <input class = "inputregion" type="text" name="bday" placeholder="Birthday" style = "border-radius:5px;">  <br/>
-
-          <select id = "select-region" name="gender" >
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-              <option value="Other">Other</option>
-            </select>
-
-      </fieldset>
-
-      <fieldset class="form-security" style = "border-radius:10px;position: relative;text-align:center;z-index: 998; top:20px; margin:20px;margin-left:20%; margin-right:20%">
-          <legend style="text-align:center">Security Question:</legend>
-
-          <input list="Q1" class ="inputregion" placeholder="Security Question 1" style = "border-radius:5px;">
-              <datalist id="Q1">
-                <option value="What's your father's first name">
-                <option value="who's your favourite singer">
-                <option value="What is your birthday">
-                <option value="When you enter your high school">
-                <option value="When you get married">
-              </datalist> <br/>
-              <input class = "inputregion"  type="email" name="email" placeholder="Answer" style = "border-radius:5px;">  <br/>
-
-          <input list="Q2" class ="inputregion" placeholder="Security Question 2" style = "border-radius:5px;">
-              <datalist id="Q2">
-                <option value="What's your father's first name">
-                <option value="who's your favourite singer">
-                <option value="What is your birthday">
-                <option value="When you enter your high school">
-                <option value="When you get married">
-              </datalist> <br/>
-              <input class = "inputregion"  type="email" name="email" placeholder="Answer" style = "border-radius:5px;">  <br/>
-
-          <input list="Q3" class ="inputregion" placeholder="Security Question 3" style = "border-radius:5px;">
-              <datalist id="Q3">
-                <option value="What's your father's first name">
-                <option value="who's your favourite singer">
-                <option value="What is your birthday">
-                <option value="When you enter your high school">
-                <option value="When you get married">
-              </datalist> <br/>
-              <input class = "inputregion"  type="email" name="email" placeholder="Answer" style = "border-radius:5px;">  <br/>
-        </fieldset>
-
-        <div  style="position:relative; text-align:center; margin:40px; margin-left:20%;margin-right:20%">
-          <input id="register" type="submit"  value="Register"  style="width: 140px; border-radius:5px;" />
-        </div>
-
-  </form>
 
 <div class = "row">
    <footer style="background-color:#333333" >
