@@ -191,7 +191,7 @@
     </div>
 </div>
 
-  <form action="http://10.182.191.177:8080">
+  <form action="http://52.15.80.212:8080/myaction" method="post">
 
     <fieldset id = "field" class="form-account" style = "position: relative;text-align:center;z-index: 998; top:20; margin:20px;margin-left:20%; margin-right:20%">
         <legend style="text-align:center">Account information:</legend>
@@ -229,7 +229,7 @@
       <fieldset class="form-security" style = "border-radius:10px;position: relative;text-align:center;z-index: 998; top:20px; margin:20px;margin-left:20%; margin-right:20%">
           <legend style="text-align:center">Security Question:</legend>
 
-          <input list="Q1" class ="inputregion" placeholder="Security Question 1" style = "border-radius:5px;">
+          <input list="Q1" class ="inputregion" placeholder="Security Question 1" style = "border-radius:5px;" name = "Q1">
               <datalist id="Q1">
                 <option value="What's your father's first name">
                 <option value="who's your favourite singer">
@@ -237,9 +237,9 @@
                 <option value="When you enter your high school">
                 <option value="When you get married">
               </datalist> <br/>
-              <input class = "inputregion"  type="email" name="email" placeholder="Answer" style = "border-radius:5px;">  <br/>
+              <input class = "inputregion"  type="text" name="A1" placeholder="Answer" style = "border-radius:5px;">  <br/>
 
-          <input list="Q2" class ="inputregion" placeholder="Security Question 2" style = "border-radius:5px;">
+          <input list="Q2" class ="inputregion" placeholder="Security Question 2" style = "border-radius:5px;" name = "Q2">
               <datalist id="Q2">
                 <option value="What's your father's first name">
                 <option value="who's your favourite singer">
@@ -247,9 +247,9 @@
                 <option value="When you enter your high school">
                 <option value="When you get married">
               </datalist> <br/>
-              <input class = "inputregion"  type="email" name="email" placeholder="Answer" style = "border-radius:5px;">  <br/>
+              <input class = "inputregion"  type="text" name="A2" placeholder="Answer" style = "border-radius:5px;">  <br/>
 
-          <input list="Q3" class ="inputregion" placeholder="Security Question 3" style = "border-radius:5px;">
+          <input list="Q3" class ="inputregion" placeholder="Security Question 3" style = "border-radius:5px;" name = "Q3">
               <datalist id="Q3">
                 <option value="What's your father's first name">
                 <option value="who's your favourite singer">
@@ -257,7 +257,7 @@
                 <option value="When you enter your high school">
                 <option value="When you get married">
               </datalist> <br/>
-              <input class = "inputregion"  type="email" name="email" placeholder="Answer" style = "border-radius:5px;">  <br/>
+              <input class = "inputregion"  type="text" name="A3" placeholder="Answer" style = "border-radius:5px;">  <br/>
         </fieldset>
 
         <div  style="position:relative; text-align:center; margin:40px; margin-left:20%;margin-right:20%">
