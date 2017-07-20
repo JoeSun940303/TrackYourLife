@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
   color: white;
-  height:900px;
+  height:800px;
 }
 
 
@@ -80,6 +80,12 @@
 .nav-side-menu li .sub-menu li:hover {
   background-color: #FACD3C;
 }
+
+.nav-side-menu ul .sub-menu li.active,
+.nav-side-menu li .sub-menu li.active {
+  background-color: #FACD3C;
+}
+
 .nav-side-menu ul .sub-menu li:before,
 .nav-side-menu li .sub-menu li:before {
   margin-left:25px;
@@ -148,7 +154,7 @@
     line-height: 50px !important;
   }
 }
-@media (min-width: 767px) {
+@media (min-width: 768px) {
 
   .nav-side-menu .menu-list .menu-content {
     display: block;
