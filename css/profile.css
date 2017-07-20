@@ -127,7 +127,11 @@
   -ms-transition: all 1s ease;
   transition: all 1s ease;
 }
+
 @media (max-width: 767px) {
+  #dealpadding{
+    padding: 0 !important;
+  }
   .nav-side-menu {
     position: relative;
     width: 100%;
