@@ -16,6 +16,7 @@
 
   <link href="css/bootstrap-social.css" rel="stylesheet">
   <link href="css/mystyles.css" rel="stylesheet">
+  <link href="css/profile.css" rel="stylesheet">
   <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
@@ -163,38 +164,81 @@
             </div>
             </div>
 
-<div class = "row" style = "position:relative;">
-    <header class="jumbotron">
-        <!-- Main component for a primary marketing message or call to action -->
 
-        <div class = "container">
-            <div class = "row row-header">
-              <div class="col-xs-1 visible-xs"> </div>
-                <div class = "col-xs-10 col-sm-6 nopadding">
-                    <h1>Manage your account</h1>
-                    <p style="padding:30px;"></p>
-                    <p>Just need one account, you can view all your activity here</p>
-                </div>
-            </div>
-        </div> d
-    </header>
+<div class = "row nav-side-containter">
+  <div class = "col-xs-12 col-sm-4">
+  <div class="nav-side-menu">
+    <div class="brand">Manage your account</div>
+    <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+
+        <div class="menu-list">
+
+            <ul id="menu-content" class="menu-content collapse out">
+                <li class="active">
+                  <a href="#" style = "margin-left:30px">
+                   Your Profile
+                  </a>
+                </li>
+
+                <li  data-toggle="collapse" data-target="#products" class="collapsed">
+                  <a href="#" style = "margin-left:30px">Task Overview <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="products">
+                    <li><a href="#">Your Learning OverView</a></li>
+                    <li><a href="#">Your Exercise OverView</a></li>
+                    <li><a href="#">Your Meal OverView</a></li>
+                    <li><a href="#">Your Daily</a></li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#service" class="collapsed">
+                  <a href="#" style = "margin-left:30px"> Your Insist <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="service">
+                  <li>subitem1</li>
+                  <li>subitem2</li>
+                  <li>subitem3</li>
+                </ul>
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed">
+                  <a href="#" style = "margin-left:30px"> Item1 <span class="arrow"></span></a>
+                </li>
+                <ul class="sub-menu collapse" id="new">
+                  <li>subitem1</li>
+                  <li>subitem2</li>
+                  <li>subitem3</li>
+                </ul>
+
+
+                 <li>
+                  <a href="#" style = "margin-left:30px">
+                   Item2
+                  </a>
+                  </li>
+
+                 <li>
+                  <a href="#" style = "margin-left:30px">
+                  Item3
+                  </a>
+                </li>
+            </ul>
+     </div>
+</div>
+  </div>
+
+
+
 </div>
 
-<div>
-    <div>
-      <ol class="breadcrumb" style = "background-color:white">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="underconstruction.html">Account</a></li>
-        <li class = "active" > profile </li>
-      </ol>
-    </div>
-</div>
 
 
-<div class = "row">
-   <footer style="background-color:#333333" >
+
+
+<div class = "row" style = "position:relative;top:50px">
+   <footer style="background-color:#333333">
        <div class = "container">
-           <div class = "row footer-content">
+           <div class = "row footer-content" >
                <div class = "col-xs-6 col-sm-4 ">
                    <h5 style="color:#D5D5D5">Related Links</h5>
                    <ul class ="list-unstyled">
