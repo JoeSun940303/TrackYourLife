@@ -1,8 +1,12 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var app     = express();
-var os = require('os');
 
+var MongoClient = require('mongodb').MongoClient,
+    assert = require('assert');
+
+// Connection URL
+var url = 'mongodb://localhost:27017/accountmanage';
 //Note that in version 4 of express, express.bodyParser() was
 //deprecated in favor of a separate 'body-parser' module.
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -10,6 +14,33 @@ app.use(bodyParser.urlencoded({ extended: true }));
 //app.use(express.bodyParser());
 
 app.post('/myaction', function(req, res) {
+
+
+  // Use connect method to connect to the Server
+  MongoClient.connect(url, function (err, db) {
+      assert.equal(err,null);
+      console.log("Connected correctly to server");
+          var collection = db.collection("account");
+          collection.insertOne({name: req.body.accountname, password: req.body.password}, function(err,result){
+          assert.equal(err,null);
+          console.log("After Insert:");
+          console.log(result.ops);
+                  collection.find({}).toArray(function(err,docs){
+              assert.equal(err,null);
+              console.log("Found:");
+              console.log(docs);
+              assert.equal(err,null);
+              db.close();
+                        //  db.dropCollection("dishes", function(err, result){
+                // assert.equal(err,null);
+              //   db.close();
+            //  });
+          });
+        });
+  });
+
+
+
   var infor = "Your account: "+ req.body.accountname
   + "\nyour password: " + req.body.password
   + "\nyour email: " + req.body.email
