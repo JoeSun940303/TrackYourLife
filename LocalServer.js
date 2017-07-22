@@ -66,11 +66,19 @@ app.post('/signin', function(req, res) {
           collection.find(query).toArray(function(err, result) {
             if (err) throw err;
             console.log(result);
+            if(result.length==1){
+              res.writeHead(200, {'Content-Type': 'text/plain'});
+              res.write("Login Successful");
+              res.end();
+            }
+            else{
+              res.writeHead(200, {'Content-Type': 'text/plain'});
+              res.write("Wrong password or username");
+              res.end();
+            }
             db.close();
             assert.equal(err,null);
-            res.writeHead(200, {'Content-Type': 'text/plain'});
-            res.write("we are seeking");
-            res.end();
+
 
           });
   });
