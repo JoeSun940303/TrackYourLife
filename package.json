@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/JoeSun940303/TrackYourLife#readme",
   "dependencies" : {
-    "express" : "~4.15.3",
+    "express" : "~3.4.4",
     "ejs" : "~0.8.5",
     "mongoose" : "~4.4",
     "passport" : "~0.1.17",
