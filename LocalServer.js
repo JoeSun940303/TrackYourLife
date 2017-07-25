@@ -1,20 +1,33 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var app     = express();
+var path = require('path');
+var hostname = 'localhost';
+var port = 8080;
 
-var MongoClient = require('mongodb').MongoClient,
-    assert = require('assert');
+
+var app = express();
+
+var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
 
 // Connection URL
 var url = 'mongodb://localhost:27017/accountmanage';
 //Note that in version 4 of express, express.bodyParser() was
 //deprecated in favor of a separate 'body-parser' module.
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.static(__dirname + '/'));
 //app.use(express.bodyParser());
 
 app.post('/register', function(req, res) {
   // Use connect method to connect to the Server
+  if(req.body.invitecode!="SYFJZTBL19940303"){
+    res.writeHead(200, {'Content-Type': 'text/plain'});
+    res.write("Wrong Invatation Code");
+    res.end();
+  }
+
+
+  else{
   MongoClient.connect(url, function (err, db) {
       assert.equal(err,null);
       console.log("Connected correctly to server");
@@ -34,25 +47,12 @@ app.post('/register', function(req, res) {
               console.log(docs);
               assert.equal(err,null);
               db.close();
-              var infor = "Your account: "+ req.body.accountname
-              + "\nyour password: " + req.body.password
-              + "\nyour email: " + req.body.email
-              + "\nyour firstname: " + req.body.firstname
-              + "\nyour lastname: " + req.body.lastname
-              + "\nyour birthday: " + req.body.birthday
-              + "\nyour first question: " + req.body.Q1
-              + "\nyour first answer: " + req.body.A1
-              + "\nyour second question: " + req.body.Q1
-              + "\nyour second answer: " + req.body.A1
-              + "\nyour third question: " + req.body.Q1
-              + "\nyour third answer: " + req.body.A1
-              +"\nWe have received your info now you can log in";
-              res.writeHead(200, {'Content-Type': 'text/plain'});
-              res.write(infor);
-              res.end();
+              res.sendFile( path.join( __dirname, '', 'registersuccess.html' ));
           });
         });
   });
+
+}
 });
 
 
@@ -67,14 +67,12 @@ app.post('/signin', function(req, res) {
             if (err) throw err;
             console.log(result);
             if(result.length==1){
-              res.writeHead(200, {'Content-Type': 'text/plain'});
-              res.write("Login Successful");
-              res.end();
+              res.sendFile( path.join( __dirname, '', 'loginsuccess.html' ));
+              //res.end();
             }
             else{
-              res.writeHead(200, {'Content-Type': 'text/plain'});
-              res.write("Wrong password or username");
-              res.end();
+              res.sendFile( path.join( __dirname, '', 'loginfail.html' ));
+              //res.end();
             }
             db.close();
             assert.equal(err,null);
@@ -84,6 +82,6 @@ app.post('/signin', function(req, res) {
   });
 });
 
-app.listen(8080, function() {
+app.listen(port, hostname, function() {
   console.log('Server running ');
 });

@@ -76,6 +76,7 @@
               <ul class="dropdown-menu">
                 <li><a href='account.html'>Sign up</a></li>
                 <li><a href="#" id="signinbutton">Sign in</a></li>
+                <li><a>profile</a></li>
               </ul>
             </li>
             <!--
@@ -97,15 +98,15 @@
             <h4 class="modal-title">Login </h4>
           </div>
           <div class="modal-body">
-            <form>
+            <form action="http://52.15.80.212:8080/signin" method="post">
               <div class="row">
                 <div class="form-group col-xs-12">
-                  <label class="sr-only" for="username">E-mail</label>
-                  <input type="email" class="form-control" id="e-mail" placeholder="e-mail" size="18">
+                  <label class="sr-only" for="username">AccountName</label>
+                  <input type="text" class="form-control" id="e-mail" placeholder="name" size="18" name="accountname">
                 </div>
                 <div class="form-group col-xs-12">
                   <label class="sr-only" for="password">Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="password" size="18">
+                  <input type="password" class="form-control" id="password" placeholder="password" size="18" name="password">
                 </div>
               </div>
               <div class="row hidden-xs">
@@ -118,7 +119,7 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-12 text-right">
-                  <button type="button" class="btn btn-info btn-sm "> Sign in </button>
+                  <button type="submit" class="btn btn-info btn-sm "> Sign in </button>
                   <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -132,7 +133,7 @@
                   </a>
                 </div>
                 <div class="col-sm-4 col-xs-12 text-center">
-                  <button type="button" class="btn btn-info btn-sm "> Sign in </button>
+                  <button type="submit" class="btn btn-info btn-sm "> Sign in </button>
                   <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
                 </div>
               </div>
@@ -340,6 +341,26 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script>
+      $(document).ready(function() {
+        $("#mycarousel").carousel({
+          interval: 2000
+        });
+        $("#carousel-pause").click(function() {
+          $("#mycarousel").carousel('pause');
+        });
+        $("#carousel-play").click(function() {
+          $("#mycarousel").carousel('cycle');
+        });
+        $("#signinbutton").click(function() {
+          $('#loginModal').modal('show')
+        });
+        $("#reserveButton").click(function() {
+          $('#reserveModal').modal('show')
+        });
+      });
+    </script>
+
   </body>
 
 </html>
