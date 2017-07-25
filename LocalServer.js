@@ -1,7 +1,6 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var path = require('path');
-var hostname = 'localhost';
 var port = 8080;
 
 
@@ -82,6 +81,6 @@ app.post('/signin', function(req, res) {
   });
 });
 
-app.listen(port, hostname, function() {
+app.listen(port, function() {
   console.log('Server running ');
 });
