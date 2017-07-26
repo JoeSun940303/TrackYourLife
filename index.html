@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
 
   <head>
     <meta charset="utf-8">
@@ -22,7 +22,7 @@
   <![endif]-->
   </head>
 
-  <body onload="Show notification()">
+  <body>
     <script>
       var warning = "This website is still under construction, sorry that almost all " +
         "functions are unavailable now, please see our update log to see our updates. We " +
@@ -77,12 +77,14 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-click="isLoggedIn()">
                          Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href='account.html'>Sign up</a></li>
-                <li><a id="signinbutton">Sign in</a></li>
-                <li><a href='profile.html'> My profile </a> </li>
+                <li ng-hide="loggedIn"><a href='account.html'>Sign up</a></li>
+                <li ng-hide="loggedIn"><a id="signinbutton">Sign in</a></li>
+                <li ng-hide="!loggedIn"><a href='/profile'>profile</a></li>
+                <li ng-hide="!loggedIn"><a href='/logout'>logout</a></li>
+
               </ul>
             </li>
           </ul>
@@ -102,7 +104,7 @@
               <div class="row">
                 <div class="form-group col-xs-12">
                   <label class="sr-only" for="username">AccountName</label>
-                  <input type="text" class="form-control" id="e-mail" placeholder="name" size="18" name="accountname">
+                  <input type="text" class="form-control" id="e-mail" placeholder="name" size="18" name="email">
                 </div>
                 <div class="form-group col-xs-12">
                   <label class="sr-only" for="password">Password</label>
@@ -442,6 +444,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bower_components/angular/angular.min.js"></script>
+
     <script>
       $(document).ready(function() {
         $("#mycarousel").carousel({
@@ -461,6 +465,30 @@
         });
       });
     </script>
+
+    <script>
+      var app = angular.module('myApp', []);
+      app.controller('myCtrl', function($scope, $http) {
+        $scope.loggedIn = false;
+
+        $scope.isLoggedIn = function() {
+          console.log("position1");
+
+          $http.get('/checklogin')
+            .success(function(data) {
+              console.log(data);
+              if (data === true)
+                $scope.loggedIn = true;
+              else
+                $scope.loggedIn = false;
+            })
+            .error(function(data) {
+              console.log('error: ' + data);
+            });
+        };
+      });
+    </script>
+
   </body>
 
 </html>

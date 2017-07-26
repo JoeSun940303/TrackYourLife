@@ -1,85 +1,37 @@
 var express = require('express');
 var bodyParser = require('body-parser');
-var path = require('path');
+var mongoose = require('mongoose');
 var port     = process.env.PORT || 8080;
+var passport = require('passport');
+var flash    = require('connect-flash');
+var path = require('path');
+var cookieParser = require('cookie-parser');
+var session = require('express-session');
 
 
 var app = express();
+var configDB = require('./database.js');
 
-var MongoClient = require('mongodb').MongoClient;
-var assert = require('assert');
-
-// Connection URL
-var url = 'mongodb://localhost:27017/accountmanage';
+mongoose.connect(configDB.url); // connect to our database
 //Note that in version 4 of express, express.bodyParser() was
 //deprecated in favor of a separate 'body-parser' module.
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + '/'));
 //app.use(express.bodyParser());
 
-app.post('/register', function(req, res) {
-  // Use connect method to connect to the Server
-  if(req.body.invitecode!="SYFJZTBL19940303"){
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.write("Wrong Invatation Code");
-    res.end();
-  }
+require('./passport')(passport); // pass passport for configuration
+
+//app.use(express.logger('dev')); // log every request to the console
+app.use(cookieParser()); // read cookies (needed for auth)
+app.use(bodyParser()); // get information from html forms
+
+app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
+app.use(passport.initialize());
+app.use(passport.session()); // persistent login sessions
+app.use(flash()); // use connect-flash for flash messages stored in session
 
 
-  else{
-  MongoClient.connect(url, function (err, db) {
-      assert.equal(err,null);
-      console.log("Connected correctly to server");
-          var collection = db.collection("account");
-          collection.insertOne({name: req.body.accountname,
-                                password: req.body.password,
-                                email:req.body.email,
-                                firstname:req.body.firstname,
-                                lastname:req.body.lastname,
-                                birthday:req.body.birthday}, function(err,result){
-          assert.equal(err,null);
-          console.log("After Insert:");
-          console.log(result.ops);
-                  collection.find({}).toArray(function(err,docs){
-              assert.equal(err,null);
-              console.log("Found:");
-              console.log(docs);
-              assert.equal(err,null);
-              db.close();
-              res.sendFile( path.join( __dirname, '', 'registersuccess.html' ));
-          });
-        });
-  });
-
-}
-});
-
-
-app.post('/signin', function(req, res) {
-  // Use connect method to connect to the Server
-  MongoClient.connect(url, function (err, db) {
-      assert.equal(err,null);
-      console.log("Connected correctly to server");
-          var collection = db.collection("account");
-          var query = { name: req.body.accountname, password:req.body.password};
-          collection.find(query).toArray(function(err, result) {
-            if (err) throw err;
-            console.log(result);
-            if(result.length==1){
-              res.sendFile( path.join( __dirname, '', 'loginsuccess.html' ));
-              //res.end();
-            }
-            else{
-              res.sendFile( path.join( __dirname, '', 'loginfail.html' ));
-              //res.end();
-            }
-            db.close();
-            assert.equal(err,null);
-
-
-          });
-  });
-});
+require('./routes.js')(app, passport,path); // load our routes and pass in our app and fully configured passport
 
 
 app.listen(port, function() {
