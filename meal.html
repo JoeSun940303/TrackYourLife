@@ -16,6 +16,7 @@
     <link href="css/mystyles.css" rel="stylesheet">
     <link href="css/profile.css" rel="stylesheet">
     <link href="css/progress.css" rel="stylesheet">
+    <link href="css/meal.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -76,7 +77,8 @@
                          Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
 
-                <li><a href="profile.html">profile</a></li>
+                <li><a href='/profile'>profile</a></li>
+                <li><a href='/logout'>logout</a></li>
               </ul>
             </li>
             <!--
@@ -173,9 +175,9 @@
                 <a style="margin-left:30px">Task Overview <span class="arrow"></span></a>
               </li>
               <ul class="sub-menu" id="products">
-                <li class="active"><a>Overview</a></li>
+                <li><a href="overview.html">Overview</a></li>
                 <li><a>Exercise</a></li>
-                <li><a href="meal.html">Meal</a></li>
+                <li class="active"><a>Meal</a></li>
                 <li><a>Daily</a></li>
               </ul>
               <li data-toggle="collapse" data-target="#service" class="collapsed">
@@ -215,67 +217,65 @@
         </div>
       </div>
       <div class="col-xs-9 col-xs-offset-2 col-sm-offset-0 col-sm-8 col-md-9" style="padding-left:0px !important; height:800px; overflow:scroll">
-        <form style="margin-top:40px;">
-          <fieldset>
-            <legend style="text-align:center;">This is your activity overview</legend>
-          </fieldset>
-        </form>
         <div class="row">
-          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
-            <div style="border-radius:10px;background-color:#F0F0F0;height:100%">
-              <div class="progress blue">
-                <span class="progress-left">
-                    <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                    <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">90%</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
-            <div style="border-radius:10px;background-color:#F0F0F0;height:100%">
-            </div>
+          <div id="submitbutton" class="col-xs-12 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+            <p> This is the place to put the submit button </p>
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
-            <div style="border-radius:10px;background-color:#F0F0F0;height:100%">
-              <div class="progress yellow">
-                <span class="progress-left">
-                    <span class="progress-bar"></span>
-                </span>
-                <span class="progress-right">
-                    <span class="progress-bar"></span>
-                </span>
-                <div class="progress-value">75%</div>
-              </div>
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
-            <div style="border-radius:10px;background-color:#F0F0F0;height:100%">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
-            <div style="border-radius:10px;background-color:#7D7D7D;height:100%">
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
-            <div style="border-radius:10px;background-color:#7D7D7D;height:100%">
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
-            <div style="border-radius:10px;background-color:#7D7D7D;height:100%">
-            </div>
-          </div>
-          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
-            <div style="border-radius:10px;background-color:#7D7D7D;height:100%">
-            </div>
+          <div class="gallery">
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1448814100339-234df1d4005d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>Daytona Beach <small>United States</small></figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>Териберка, gorod Severomorsk <small>Russia</small></figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>
+                Bad Pyrmont <small>Deutschland</small>
+              </figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1439798060585-62ab242d7724?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>Yellowstone National Park <small>United States</small></figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>Quiraing, Portree <small>United Kingdom</small></figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>Highlands <small>United States</small></figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1448814100339-234df1d4005d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>Daytona Beach <small>United States</small></figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1443890923422-7819ed4101c0?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>Териберка, gorod Severomorsk <small>Russia</small></figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1445964047600-cdbdb873673d?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>
+                Bad Pyrmont <small>Deutschland</small>
+              </figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1439798060585-62ab242d7724?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>Yellowstone National Park <small>United States</small></figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1440339738560-7ea831bf5244?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>Quiraing, Portree <small>United Kingdom</small></figcaption>
+            </figure>
+            <figure class="col-xs-12 col-sm-6 col-md-4">
+              <img src="https://images.unsplash.com/photo-1441906363162-903afd0d3d52?crop=entropy&fit=crop&fm=jpg&h=400&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=600" alt="" />
+              <figcaption>Highlands <small>United States</small></figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -342,6 +342,63 @@
         });
       });
     </script>
+
+    <script>
+      popup = {
+        init: function() {
+          $('figure').click(function() {
+            if ($(document).width() > 768) {
+              popup.open($(this));
+            }
+          });
+
+          $(document).on('click', '.popup img', function() {
+            return false;
+          }).on('click', '.popup', function() {
+            popup.close();
+          })
+        },
+        open: function($figure) {
+          $('.gallery').addClass('pop');
+          $popup = $('<div class="popup hidden-xs" />').appendTo($('body'));
+          $fig = $figure.clone().appendTo($('.popup'));
+          $bg = $('<div class="bg" />').appendTo($('.popup'));
+          $close = $('<div class="close"><svg><use xlink:href="#close"></use></svg></div>').appendTo($fig);
+          $shadow = $('<div class="shadow" />').appendTo($fig);
+          src = $('img', $fig).attr('src');
+          $shadow.css({
+            backgroundImage: 'url(' + src + ')'
+          });
+          $bg.css({
+            backgroundImage: 'url(' + src + ')'
+          });
+          setTimeout(function() {
+            $('.popup').addClass('pop');
+          }, 10);
+        },
+        close: function() {
+          $('.gallery, .popup').removeClass('pop');
+          setTimeout(function() {
+            $('.popup').remove()
+          }, 100);
+        }
+      }
+
+      popup.init()
+    </script>
+
   </body>
+
+</html>
+popup.init()
+</script>
+
+</body>
+
+</html>
+popup.init()
+</script>
+
+</body>
 
 </html>
