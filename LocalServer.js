@@ -24,7 +24,7 @@ require('./passport')(passport); // pass passport for configuration
 //app.use(express.logger('dev')); // log every request to the console
 app.use(cookieParser()); // read cookies (needed for auth)
 app.use(bodyParser()); // get information from html forms
-
+app.set('view engine', 'ejs'); // set up ejs for templating
 app.use(session({ secret: 'ilovescotchscotchyscotchscotch' })); // session secret
 app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions

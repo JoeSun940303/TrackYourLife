@@ -17,7 +17,7 @@ module.exports = function(app, passport,path) {
 	app.get('/signin', function(req, res) {
 
 		// render the page and pass in any flash data if it exists
-		//res.render('login.ejs', { message: req.flash('loginMessage') });
+		res.render(__dirname+'/account.ejs', { registermsg:"", message: req.flash('loginMessage') });
 		console.log("get /signin is called");
 	});
 
@@ -35,8 +35,15 @@ module.exports = function(app, passport,path) {
 	app.get('/register', function(req, res) {
 
 		// render the page and pass in any flash data if it exists
-		//res.render('signup.ejs', { message: req.flash('signupMessage') });
+		res.render(__dirname+'/account.ejs', { registermsg: req.flash('signupMessage'),message:"" });
 		console.log("get /signup is called");
+	});
+
+	app.get('/account', function(req, res) {
+
+		// render the page and pass in any flash data if it exists
+		res.render(__dirname+'/account.ejs',{ registermsg: req.flash('loginMessage'),message:"" });
+		console.log("get /account is called");
 	});
 
 	// process the signup form
@@ -74,7 +81,7 @@ module.exports = function(app, passport,path) {
 			else
 				res.send(false);
 	});
-	
+
 };
 
 
