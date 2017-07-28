@@ -8,9 +8,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
 
-
 var app = express();
 var configDB = require('./database.js');
+
 
 mongoose.connect(configDB.url); // connect to our database
 //Note that in version 4 of express, express.bodyParser() was
@@ -30,10 +30,13 @@ app.use(passport.initialize());
 app.use(passport.session()); // persistent login sessions
 app.use(flash()); // use connect-flash for flash messages stored in session
 
+// load our routes and pass in our app and fully configured passport
+require('./routes.js')(app, passport,path);
 
-require('./routes.js')(app, passport,path); // load our routes and pass in our app and fully configured passport
+// Load "meal.js" to store the dish data into database
+require('./meal.js')(app);
 
-
+// Listen the port of local machine
 app.listen(port, function() {
   console.log('Server running ');
 });
