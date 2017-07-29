@@ -1,74 +1,56 @@
 // app/routes.js
 module.exports = function(app, passport,path) {
 
-	// =====================================
-	// HOME PAGE (with login links) ========
-	// =====================================
-	app.get('/', function(req, res) {
-		//res.render('index.ejs'); // load the index.ejs file
-		console.log("get /is called");
+
+	app.get('/home', function(req, res) {
+		res.render(__dirname+'/home.ejs', { message: req.flash('loginMessage') });
 	});
 
-	// =====================================
-	// LOGIN ===============================
-	// =====================================
-	// show the login form
+	app.get('/update', function(req, res) {
+		res.render(__dirname+'/update.ejs', { message: req.flash('loginMessage') });
+	});
 
-	app.get('/signin', function(req, res) {
 
-		// render the page and pass in any flash data if it exists
-		res.render(__dirname+'/account.ejs', { registermsg:"", message: req.flash('loginMessage') });
-		console.log("get /signin is called");
+	app.get('/account', function(req, res) {
+		res.render(__dirname+'/account.ejs',{ registermsg: req.flash('signupMessage'),message:req.flash('loginMessage') });
 	});
 
 	// process the login form
 	app.post('/signin', passport.authenticate('local-login', {
 		successRedirect : '/profile', // redirect to the secure profile section
-		failureRedirect : '/signin', // redirect back to the signup page if there is an error
+		failureRedirect : '/account', // redirect back to the signup page if there is an error
 		failureFlash : true // allow flash messages
 	}));
 
-	// =====================================
-	// SIGNUP ==============================
-	// =====================================
-	// show the signup form
-	app.get('/register', function(req, res) {
+	app.post('/signin_home', passport.authenticate('local-login', {
+		successRedirect : '/profile', // redirect to the secure profile section
+		failureRedirect : '/', // redirect back to the signup page if there is an error
+		failureFlash : true // allow flash messages
+	}));
+	app.post('/signin_update', passport.authenticate('local-login', {
+		successRedirect : '/profile', // redirect to the secure profile section
+		failureRedirect : '/update', // redirect back to the signup page if there is an error
+		failureFlash : true // allow flash messages
+	}));
 
-		// render the page and pass in any flash data if it exists
-		res.render(__dirname+'/account.ejs', { registermsg: req.flash('signupMessage'),message:"" });
-		console.log("get /signup is called");
-	});
-
-	app.get('/account', function(req, res) {
-
-		// render the page and pass in any flash data if it exists
-		res.render(__dirname+'/account.ejs',{ registermsg: req.flash('loginMessage'),message:"" });
-		console.log("get /account is called");
-	});
-
-	// process the signup form
 	app.post('/register', passport.authenticate('local-signup', {
 		successRedirect : '/profile', // redirect to the secure profile section
-		failureRedirect : '/register', // redirect back to the signup page if there is an error
+		failureRedirect : '/account', // redirect back to the signup page if there is an error
 		failureFlash : true // allow flash messages
 	}));
 
-	// =====================================
-	// PROFILE SECTION =========================
-	// =====================================
-	// we will want this protected so you have to be logged in to visit
-	// we will use route middleware to verify this (the isLoggedIn function)
 	app.get('/profile', isLoggedIn, function(req, res) {
-		//res.render('profile.ejs', {
-		//	user : req.user // get the user out of session and pass to template
-		//});
-		console.log("get / profile is called");
-		 res.sendFile( path.join( __dirname, '', 'profile.html' ));
+		 res.render(__dirname+'/profile.ejs',{user : req.user });
 	});
 
-	// =====================================
-	// LOGOUT ==============================
-	// =====================================
+	app.get('/meal', isLoggedIn, function(req, res) {
+		res.render(__dirname+'/meal.ejs');
+	});
+
+	app.get('/overview', isLoggedIn, function(req, res) {
+		res.render(__dirname+'/overview.ejs');
+	});
+
 	app.get('/logout', function(req, res) {
 		req.logout();
 		res.redirect('/');

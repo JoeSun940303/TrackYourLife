@@ -14,6 +14,8 @@
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
     <link href="css/mystyles.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
+    <link href="css/progress.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,11 +34,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="index.html"><img src="img/Track.png" height=30 width=80></a>
+          <a class="navbar-brand" href="/"><img src="img/Track.png" height=30 width=80></a>
         </div>
         <div class="navbar-collapse collapse" id="mynav" style="max-height: 100% !important; ">
           <ul class="nav navbar-nav">
-            <li><a href="index.html"> Home</a></li>
+            <li><a href="/"> Home</a></li>
             <li><a href="#">About</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -66,16 +68,15 @@
                 <li><a href="#">Our source code</a></li>
               </ul>
             </li>
-            <li><a href="update.html">UpdateLog</a></li>
+            <li><a href="/update">UpdateLog</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                          Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href='account.html'>Sign up</a></li>
-                <li><a id="signinbutton">Sign in</a></li>
-                <li><a href='profile.html'> My profile </a> </li>
+
+                <li><a href="/profile">profile</a></li>
               </ul>
             </li>
             <!--
@@ -148,29 +149,137 @@
           <div class="row row-header">
             <div class="col-xs-1 visible-xs"> </div>
             <div class="col-xs-10 col-sm-6 nopadding">
-              <h1>See What We Have Done So Far</h1>
+              <h1>Manage Your Account</h1>
               <p style="padding:30px;"></p>
-              <p>All our new updates are recorded here so that you can see what happened. More and more functions will be published soon, we appreciate your patience</p>
+              <p>Now, just one account, you can achieve the function combined from different apps before</p>
             </div>
           </div>
-        </div> d
+        </div>
       </header>
     </div>
-    <div>
-      <div>
-        <ol class="breadcrumb" style="background-color:white">
-          <li><a href="index.html">Home</a></li>
-          <li class="active"> Register Status </li>
-        </ol>
+    <div class="row">
+      <div id="dealpadding" class="col-xs-12 col-sm-4 col-md-3" style="overflow-y:scroll;">
+        <div class="nav-side-menu">
+          <div class="brand">Manage your account</div>
+          <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+          <div class="menu-list">
+            <ul id="menu-content" class="menu-content collapse out">
+              <li>
+                <a href="/profile" style="margin-left:30px">
+                 Your Profile
+                </a>
+              </li>
+              <li data-toggle="collapse" data-target="#products" class="collapsed">
+                <a style="margin-left:30px">Task Overview <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu" id="products">
+                <li class="active"><a>Overview</a></li>
+                <li><a>Exercise</a></li>
+                <li><a href="/meal">Meal</a></li>
+                <li><a>Daily</a></li>
+              </ul>
+              <li data-toggle="collapse" data-target="#service" class="collapsed">
+                <a style="margin-left:30px"> Your Insist <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="service">
+                <li>subitem1</li>
+                <li>subitem2</li>
+                <li>subitem3</li>
+                <li>subitem1</li>
+                <li>subitem2</li>
+                <li>subitem3</li>
+                <li>subitem1</li>
+                <li>subitem2</li>
+                <li>subitem3</li>
+              </ul>
+              <li data-toggle="collapse" data-target="#new" class="collapsed">
+                <a style="margin-left:30px"> Item1 <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="new">
+                <li>subitem1</li>
+                <li>subitem2</li>
+                <li>subitem3</li>
+              </ul>
+              <li>
+                <a style="margin-left:30px">
+                   Item2
+                  </a>
+              </li>
+              <li>
+                <a style="margin-left:30px">
+                  Item3
+                  </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-xs-9 col-xs-offset-2 col-sm-offset-0 col-sm-8 col-md-9" style="padding-left:0px !important; height:800px; overflow:scroll">
+        <form style="margin-top:40px;">
+          <fieldset>
+            <legend style="text-align:center;">This is your activity overview</legend>
+          </fieldset>
+        </form>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
+            <div style="border-radius:10px;background-color:#F0F0F0;height:100%">
+              <div class="progress blue">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">90%</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
+            <div style="border-radius:10px;background-color:#F0F0F0;height:100%">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
+            <div style="border-radius:10px;background-color:#F0F0F0;height:100%">
+              <div class="progress yellow">
+                <span class="progress-left">
+                    <span class="progress-bar"></span>
+                </span>
+                <span class="progress-right">
+                    <span class="progress-bar"></span>
+                </span>
+                <div class="progress-value">75%</div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
+            <div style="border-radius:10px;background-color:#F0F0F0;height:100%">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
+            <div style="border-radius:10px;background-color:#7D7D7D;height:100%">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
+            <div style="border-radius:10px;background-color:#7D7D7D;height:100%">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
+            <div style="border-radius:10px;background-color:#7D7D7D;height:100%">
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6" style="height:500px; margin-bottom:20px !important">
+            <div style="border-radius:10px;background-color:#7D7D7D;height:100%">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div class="row">
-      <h3 style="text-align:center"> Your account is successfully created <br>
-                                      Click here to view your profile <br> <br> <br>
-                                      <button class="btn btn-success"> <a href = "profile.html" style = "color:white">View your profile</a>  </button>
-       </h3>
-    </div>
-
     <div class="row">
       <footer style="background-color:#333333">
         <div class="container">
@@ -187,7 +296,7 @@
             <div class="col-xs-6 col-sm-4">
               <h5 style="color:#D5D5D5">Developer</h5>
               <p style="color:#BABABA">
-                Name: Yufei Sun<br> Address: University of Illinois, Urbana -Champaign<br> US, 61820<br> E-mail: <a href="mailto:yufei940303@gmail.com">yufei940303@gmail.com</a>
+                Name: Yufei Sun<br> dress: University of Illinois, Urbana -Champaign<br> US, 61820<br> E-mail: <a href="mailto:yufei940303@gmail.com">yufei940303@gmail.com</a>
               </p>
             </div>
             <div class="col-xs-12 col-sm-4">
@@ -213,6 +322,7 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
+
     <script>
       $(document).ready(function() {
         $("#mycarousel").carousel({

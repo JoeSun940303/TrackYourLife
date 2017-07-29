@@ -32,11 +32,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="index.html"><img src="img/Track.png" height=30 width=80></a>
+          <a class="navbar-brand" href="/"><img src="img/Track.png" height=30 width=80></a>
         </div>
         <div class="navbar-collapse collapse" id="mynav" style="max-height: 100% !important; ">
           <ul class="nav navbar-nav">
-            <li><a href="index.html"> Home</a></li>
+            <li><a href="/"> Home</a></li>
             <li><a href="#">About</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -66,14 +66,14 @@
                 <li><a href="#">Our source code</a></li>
               </ul>
             </li>
-            <li><a href="update.html">UpdateLog</a></li>
+            <li><a href="/update">UpdateLog</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ng-click="isLoggedIn()">
                          Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li ng-hide="loggedIn"><a href='account.html'>Sign up</a></li>
+                <li ng-hide="loggedIn"><a href='/account'>Sign up</a></li>
                 <li ng-hide="loggedIn"><a id="signinbutton">Sign in</a></li>
                 <li ng-hide="!loggedIn"><a href='/profile'>profile</a></li>
                 <li ng-hide="!loggedIn"><a href='/logout'>logout</a></li>
@@ -98,45 +98,50 @@
             <h4 class="modal-title">Login </h4>
           </div>
           <div class="modal-body">
-            <form action="http://52.15.80.212:8080/signin" method="post">
-              <div class="row">
-                <div class="form-group col-xs-12">
-                  <label class="sr-only" for="username">E-mail</label>
-                  <input type="text" class="form-control" id="e-mail" placeholder="name" size="18" name="email">
+            <form action="http://52.15.80.212:8080/signin_update" method="post">
+              <% if (message.length > 0) { %>
+                <div class="alert alert-danger">
+                  <%= message %>
                 </div>
-                <div class="form-group col-xs-12">
-                  <label class="sr-only" for="password">Password</label>
-                  <input type="password" class="form-control" id="password" placeholder="password" size="18" name="password">
-                </div>
-              </div>
-              <div class="row hidden-xs">
-                <div class="checkbox col-sm-12">
-                  <label> <input type = "checkbox"> <span style = "color:black">Remember Me</span> </label>
-                </div>
-                <div class="col-sm-8 col-xs-12">
-                  <a href='underconstruction.html'>
-                    <p>Forget password?</p>
-                  </a>
-                </div>
-                <div class="col-sm-4 col-xs-12 text-right">
-                  <button type="submit" class="btn btn-info btn-sm "> Sign in </button>
-                  <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
-              <div class="row visible-xs">
-                <div class="checkbox text-center">
-                  <label> <input type = "checkbox"> <span style = "color:black">Remember Me</span> </label>
-                </div>
-                <div class="col-sm-8 col-xs-12 text-center">
-                  <a href='underconstruction.html'>
-                    <p>Forget password?</p>
-                  </a>
-                </div>
-                <div class="col-sm-4 col-xs-12 text-center">
-                  <button type="submit" class="btn btn-info btn-sm "> Sign in </button>
-                  <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
-                </div>
-              </div>
+                <% } %>
+                  <div class="row">
+                    <div class="form-group col-xs-12">
+                      <label class="sr-only" for="username">E-mail</label>
+                      <input type="text" class="form-control" id="e-mail" placeholder="name" size="18" name="email">
+                    </div>
+                    <div class="form-group col-xs-12">
+                      <label class="sr-only" for="password">Password</label>
+                      <input type="password" class="form-control" id="password" placeholder="password" size="18" name="password">
+                    </div>
+                  </div>
+                  <div class="row hidden-xs">
+                    <div class="checkbox col-sm-12">
+                      <label> <input type = "checkbox"> <span style = "color:black">Remember Me</span> </label>
+                    </div>
+                    <div class="col-sm-8 col-xs-12">
+                      <a href='underconstruction.html'>
+                        <p>Forget password?</p>
+                      </a>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 text-right">
+                      <button type="submit" class="btn btn-info btn-sm "> Sign in </button>
+                      <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
+                  <div class="row visible-xs">
+                    <div class="checkbox text-center">
+                      <label> <input type = "checkbox"> <span style = "color:black">Remember Me</span> </label>
+                    </div>
+                    <div class="col-sm-8 col-xs-12 text-center">
+                      <a href='underconstruction.html'>
+                        <p>Forget password?</p>
+                      </a>
+                    </div>
+                    <div class="col-sm-4 col-xs-12 text-center">
+                      <button type="submit" class="btn btn-info btn-sm "> Sign in </button>
+                      <button type="button" class="btn btn-default btn-sm" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>
             </form>
           </div>
         </div>
@@ -160,7 +165,7 @@
     <div>
       <div>
         <ol class="breadcrumb" style="background-color:white">
-          <li><a href="index.html">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li class="active"> UpdateLog </li>
         </ol>
       </div>
@@ -281,6 +286,9 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script>
       $(document).ready(function() {
+        <% if (message.length > 0) { %>
+        $('#loginModal').modal('show');
+        <% } %>
         $("#mycarousel").carousel({
           interval: 2000
         });

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="myApp" ng-controller="myCtrl">
 
   <head>
     <meta charset="utf-8">
@@ -14,6 +14,7 @@
     <link href="bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <link href="css/bootstrap-social.css" rel="stylesheet">
     <link href="css/mystyles.css" rel="stylesheet">
+    <link href="css/profile.css" rel="stylesheet">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -32,11 +33,11 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-          <a class="navbar-brand" href="index.html"><img src="img/Track.png" height=30 width=80></a>
+          <a class="navbar-brand" href="/"><img src="img/Track.png" height=30 width=80></a>
         </div>
         <div class="navbar-collapse collapse" id="mynav" style="max-height: 100% !important; ">
           <ul class="nav navbar-nav">
-            <li><a href="index.html"> Home</a></li>
+            <li><a href="/"> Home</a></li>
             <li><a href="#">About</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -66,16 +67,15 @@
                 <li><a href="#">Our source code</a></li>
               </ul>
             </li>
-            <li><a href="update.html">UpdateLog</a></li>
+            <li><a href="/update">UpdateLog</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li class="dropdown active">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                          Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href='account.html'>Sign up</a></li>
-                <li><a id="signinbutton">Sign in</a></li>
-
+                <li><a href='/profile'>profile</a></li>
+                <li><a href='/logout'>logout</a></li>
               </ul>
             </li>
             <!--
@@ -148,27 +148,150 @@
           <div class="row row-header">
             <div class="col-xs-1 visible-xs"> </div>
             <div class="col-xs-10 col-sm-6 nopadding">
-              <h1>See What We Have Done So Far</h1>
+              <h1>Manage Your Account</h1>
               <p style="padding:30px;"></p>
-              <p>All our new updates are recorded here so that you can see what happened. More and more functions will be published soon, we appreciate your patience</p>
+              <p>Now, just one account, you can achieve the function combined from different apps before</p>
             </div>
           </div>
-        </div> d
+        </div>
       </header>
     </div>
-    <div>
-      <div>
-        <ol class="breadcrumb" style="background-color:white">
-          <li><a href="index.html">Home</a></li>
-          <li class="active"> LoginStatus </li>
-        </ol>
-      </div>
-    </div>
     <div class="row">
-      <h3 style="text-align:center"> Sorry for the unmatched password and username <br>
-                                      Click here to login again <br> <br> <br>
-                                      <button id = "signinbutton1" class="btn btn-success"> <a style = "color:white">login</a>  </button>
-       </h3>
+      <div class="col-xs-12 col-sm-5 col-md-3" style="overflow-y:scroll">
+        <div class="nav-side-menu">
+          <div class="brand">Manage your account</div>
+          <i class="fa fa-bars fa-2x toggle-btn" data-toggle="collapse" data-target="#menu-content"></i>
+          <div class="menu-list">
+            <ul id="menu-content" class="menu-content collapse out">
+              <li class="active">
+                <a style="margin-left:27px">
+                   Your Profile
+                  </a>
+              </li>
+              <li data-toggle="collapse" data-target="#products" class="collapsed">
+                <a style="margin-left:30px">Task Overview <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="products">
+                <li><a href="/overview">Overview</a></li>
+                <li><a>Exercise</a></li>
+                <li><a href="/meal">Meal</a></li>
+                <li><a>Daily</a></li>
+              </ul>
+              <li data-toggle="collapse" data-target="#service" class="collapsed">
+                <a style="margin-left:30px"> Your Insist <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="service">
+                <li>subitem1</li>
+                <li>subitem2</li>
+                <li>subitem3</li>
+                <li>subitem1</li>
+                <li>subitem2</li>
+                <li>subitem3</li>
+                <li>subitem1</li>
+                <li>subitem2</li>
+                <li>subitem3</li>
+              </ul>
+              <li data-toggle="collapse" data-target="#new" class="collapsed">
+                <a style="margin-left:30px"> Item1 <span class="arrow"></span></a>
+              </li>
+              <ul class="sub-menu collapse" id="new">
+                <li>subitem1</li>
+                <li>subitem2</li>
+                <li>subitem3</li>
+              </ul>
+              <li>
+                <a style="margin-left:30px">
+                   Item2
+                  </a>
+              </li>
+              <li>
+                <a style="margin-left:30px">
+                  Item3
+                  </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-6 col-md-8">
+        <form class="form-horizontal" style="margin-top:40px;">
+          <fieldset>
+            <!-- Form Name -->
+            <legend style="text-align:center;margin:40px;">Your Profile</legend>
+            <div class="image-upload" style="text-align:center">
+              <label for="file-input">
+         <img id = "accountpic" src="img/accountbackground.jpg" style ="height:100px;width:100px;border-radius: 50%;"/>
+     </label>
+              <input id="file-input" type="file" />
+            </div>
+            <p style="margin: 40px;text-align:center"> Click on image to change your account profile </p>
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Email</label>
+              <div class="col-md-4">
+                <input id="textinput" name="textinput" type="text" value= <%= user.local.email %> class="form-control input-md" disabled>
+              </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">First Name</label>
+              <div class="col-md-4">
+                <input id="textinput" name="textinput" type="text" value= <%= user.local.firstname %> class="form-control input-md" disabled>
+              </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Last Name</label>
+              <div class="col-md-4">
+                <input id="textinput" name="textinput" type="text" value= <%= user.local.lastname %> class="form-control input-md" disabled>
+              </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Password</label>
+              <div class="col-md-4">
+                <input id="textinput" name="textinput" type="password" value="Sun940303" class="form-control input-md" disabled>
+              </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Alias</label>
+              <div class="col-md-4">
+                <input id="textinput" name="textinput" type="text" value= <%= user.local.accountname %> class="form-control input-md" required="">
+              </div>
+            </div>
+            <!-- Text input-->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="textinput">Birthday</label>
+              <div class="col-md-4">
+                <input id="textinput" name="textinput" type="text" value= <%= user.local.bday %> class="form-control input-md">
+              </div>
+            </div>
+            <!-- Prepended checkbox -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="prependedcheckbox"></label>
+              <div class="col-md-4">
+                <div class="input-group">
+                  <span class="input-group-addon">
+                      <input type="checkbox">
+                  </span>
+                  <input id="prependedcheckbox" name="prependedcheckbox" class="form-control" type="text" value="Allow access your profile?">
+                </div>
+              </div>
+            </div>
+            <!-- Button (Double) -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="btnsave">Save Changes</label>
+              <div class="col-md-8">
+                <button id="btnsave" type="submit" name="btnsave" class="btn btn-success">Yes</button>
+                <button id="btncancel" name="btncancel" class="btn">No</button>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+      </div>
     </div>
     <div class="row">
       <footer style="background-color:#333333">
@@ -186,7 +309,7 @@
             <div class="col-xs-6 col-sm-4">
               <h5 style="color:#D5D5D5">Developer</h5>
               <p style="color:#BABABA">
-                Name: Yufei Sun<br> Address: University of Illinois, Urbana -Champaign<br> US, 61820<br> E-mail: <a href="mailto:yufei940303@gmail.com">yufei940303@gmail.com</a>
+                Name: Yufei Sun<br> dress: University of Illinois, Urbana -Champaign<br> US, 61820<br> E-mail: <a href="mailto:yufei940303@gmail.com">yufei940303@gmail.com</a>
               </p>
             </div>
             <div class="col-xs-12 col-sm-4">
@@ -214,6 +337,8 @@
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script>
       $(document).ready(function() {
+
+
         $("#mycarousel").carousel({
           interval: 2000
         });
@@ -226,14 +351,15 @@
         $("#signinbutton").click(function() {
           $('#loginModal').modal('show')
         });
-        $("#signinbutton1").click(function() {
-          $('#loginModal').modal('show')
-        });
         $("#reserveButton").click(function() {
           $('#reserveModal').modal('show')
         });
+
+
       });
     </script>
+
+
   </body>
 
 </html>
