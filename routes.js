@@ -24,7 +24,7 @@ module.exports = function(app, passport,path) {
 
 	app.post('/signin_home', passport.authenticate('local-login', {
 		successRedirect : '/profile', // redirect to the secure profile section
-		failureRedirect : '/', // redirect back to the signup page if there is an error
+		failureRedirect : '/home', // redirect back to the signup page if there is an error
 		failureFlash : true // allow flash messages
 	}));
 	app.post('/signin_update', passport.authenticate('local-login', {
@@ -53,7 +53,7 @@ module.exports = function(app, passport,path) {
 
 	app.get('/logout', function(req, res) {
 		req.logout();
-		res.redirect('/');
+		res.redirect('/home');
 	});
 
 	app.get('/checklogin',function(req,res){
@@ -63,6 +63,7 @@ module.exports = function(app, passport,path) {
 			else
 				res.send(false);
 	});
+
 
 };
 
@@ -76,5 +77,5 @@ function isLoggedIn(req, res, next) {
 		return next();
 
 	// if they aren't redirect them to the home page
-	res.redirect('/');
+	res.redirect('/home');
 }
